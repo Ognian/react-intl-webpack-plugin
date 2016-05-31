@@ -9,11 +9,11 @@ TBD
 
 `npm install ReactIntlPlugin --save-dev`
 
-- this works only with babel-loader >= x.y.z (just submitted PR)
+- this works only with babel-loader >= x.y.z (PR submitted, until it is approved you can use `"babel-loader": "git://github.com/Ognian/babel-loader.git#passthru_metadata"` )
 - you will need also the babel plugin `react-intl`
 
 changes to webpack.config.js:
-- modify your babel-loader to contain the `metadataSubscribers`option
+- modify your babel-loader to contain the `metadataSubscribers` option
 ```
 module: {
         loaders: [
