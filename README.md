@@ -1,4 +1,4 @@
-# ReactIntlPlugin
+# react-intl-webpack-plugin
 # WORK IN PROGRESS
 
 ## Workflow
@@ -7,7 +7,7 @@ TBD
 
 ## Installation
 
-`npm install ReactIntlPlugin --save-dev`
+`npm install react-intl-webpack-plugin --save-dev`
 
 - this works only with babel-loader >= x.y.z (PR submitted, until it is approved you can use `"babel-loader": "git://github.com/Ognian/babel-loader.git#passthru_metadata"` )
 - you will need also the babel plugin `react-intl`
@@ -33,7 +33,7 @@ module: {
 ```
 - add the plugin
 ```
-var ReactIntlPlugin=require('./ReactIntlPlugin');
+var ReactIntlPlugin=require('react-intl-webpack-plugin');
 ...
 plugins: [
          ...
