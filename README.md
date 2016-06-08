@@ -49,11 +49,14 @@ module: {
 
 - the generated file is called `reactIntlMessages.json`
 
-Keep in mind that as long as you use webpack-dev-server all assets are generated in memory. To access those assets use either
- - the browser an check http://localhost:devServerPort/reactIntlMessages.json
- - or, like I do, add a script to package.json like `"trans:refreshJsonDEV": "curl localhost:3100/reactIntlMessages.json >./dist/reactIntlMessages.json"`
- - or start your webpack build to generate the assets into the build directory.
+## Notes
 
+- Keep in mind that as long as you use webpack-dev-server all assets are generated in memory. To access those assets use either:
+    - the browser an check http://localhost:devServerPort/reactIntlMessages.json
+    - or, add a script to package.json like `"trans:refreshJsonDEV": "curl localhost:3100/reactIntlMessages.json >./dist/reactIntlMessages.json"`
+    - or start your webpack build to generate the assets into the build directory.
+
+- If no messages are generated it could be helpful to cleanup the `cacheDirectory` of the babel-loader, or set `"cacheDirectory": false` temporarily
 ## License
 
 MIT (http://www.opensource.org/licenses/mit-license.php)
