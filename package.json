@@ -8,8 +8,9 @@
         "type": "git",
         "url": "https://github.com/Ognian/react-intl-webpack-plugin.git"
     },
-    "dependencies": {
-        "babel-loader": "^6.0.0",
-        "babel-plugin-react-intl": "^2.3.0"
+    "peerDependencies": {
+        "babel-loader": ">= ^6.0.0",
+        "babel-plugin-react-intl": ">= ^2.3.0",
+        "webpack":">= ^4.0.0"
     }
 }
