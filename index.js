@@ -8,20 +8,20 @@ ReactIntlPlugin.prototype.apply = function (compiler) {
 
     var messages = {};
 
-    compiler.plugin("compilation", function (compilation) {
+    compiler.hooks.compilation.tap("ReactIntlPlugin", function(compilation) {
         // console.log("The compiler is starting a new compilation...");
 
-        compilation.plugin("normal-module-loader", function (context, module) {
+        compilation.hooks.normalModuleLoader.tap("ReactIntlPlugin", function (context, module) {
             // console.log("registering function: ", __dirname, "in loader context");
             context["metadataReactIntlPlugin"] = function (metadata) {
                 // do something with metadata and module
                 // console.log("module:",module,"collecting metadata:", metadata);
                 messages[module.resource] = metadata["react-intl"].messages;
-            };
-        });
-    });
+            }
+        })
+    })
 
-    compiler.plugin('emit', function (compilation, callback) {
+    compiler.hooks.emit.tapAsync("ReactIntlPlugin", function (compilation, callback) {
         // console.log("emitting messages");
 
         // check for duplicates and flatten
