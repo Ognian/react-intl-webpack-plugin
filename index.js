@@ -38,6 +38,11 @@ ReactIntlPlugin.prototype.apply = function (compiler) {
             })
         });
 
+        // order jsonString based on id (since files are under version control this makes changes easier visible)
+        jsonMessages.sort(function (a, b){
+            return ( a.id < b.id ) ? -1 : ( a.id > b.id ? 1 : 0 )
+        })
+
         var jsonString = JSON.stringify(jsonMessages, undefined, 2);
         // console.log("jsonString:",jsonString);
 
