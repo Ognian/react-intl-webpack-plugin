@@ -46,6 +46,14 @@ module: {
 
 - the generated file is called `reactIntlMessages.json`
 
+## Options
+You can pass a hash of configuration options to react-intl-webpack-plugin. Allowed values are as follows:
+
+|Name|Type|Default|Description|
+|:--:|:--:|:-----:|:----------|
+|**[`filename`](#)**|`{String}`|`./reactIntlMessages.json`|The output filename|
+
+
 ## Notes
 
 - Keep in mind that as long as you use webpack-dev-server all assets are generated in memory. To access those assets use either:

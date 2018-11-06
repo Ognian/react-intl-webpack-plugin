@@ -2,11 +2,15 @@
  * Created by ogi on 27.05.16.
  */
 function ReactIntlPlugin(options) {
+    this.options = Object.assign({}, {
+        filename: './reactIntlMessages.json' 
+    }, options);
 }
 
 ReactIntlPlugin.prototype.apply = function (compiler) {
 
     var messages = {};
+    var options = this.options;
 
     compiler.hooks.compilation.tap("ReactIntlPlugin", function(compilation) {
         // console.log("The compiler is starting a new compilation...");
@@ -47,7 +51,7 @@ ReactIntlPlugin.prototype.apply = function (compiler) {
         // console.log("jsonString:",jsonString);
 
         // Insert this list into the Webpack build as a new file asset:
-        compilation.assets['reactIntlMessages.json'] = {
+        compilation.assets[options.filename] = {
             source: function () {
                 return jsonString;
             },
