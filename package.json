@@ -1,6 +1,6 @@
 {
     "name": "react-intl-webpack-plugin",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "author": "Ognian Tschakalov",
     "description": "ReactIntlPlugin for webpack",
     "license": "MIT",
