@@ -1,6 +1,6 @@
 {
     "name": "react-intl-webpack-plugin",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "author": "Ognian Tschakalov",
     "description": "ReactIntlPlugin for webpack",
     "license": "MIT",
@@ -9,8 +9,8 @@
         "url": "https://github.com/Ognian/react-intl-webpack-plugin.git"
     },
     "peerDependencies": {
-        "babel-loader": ">= ^6.0.0",
-        "babel-plugin-react-intl": ">= ^2.3.0",
-        "webpack":">= ^4.0.0"
+        "babel-loader": ">= 6.0.0",
+        "babel-plugin-react-intl": ">= 2.3.0",
+        "webpack":">= 4.0.0"
     }
 }
